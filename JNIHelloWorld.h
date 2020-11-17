@@ -15,11 +15,6 @@ extern "C" {
 JNIEXPORT void JNICALL Java_by_bytechs_jni_JNIHelloWorld_printHelloWorld
   (JNIEnv *, jobject);
 
-/*
- * Class:     by_bytechs_jni_JNIHelloWorld
- * Method:    multiply
- * Signature: (II)I
- */
 JNIEXPORT jint JNICALL Java_by_bytechs_jni_JNIHelloWorld_multiply
   (JNIEnv *, jobject, jint, jint);
 

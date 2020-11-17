@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "JNIHelloWorld.h"
+#include "Cima_DriverC.h"
 
 JNIEXPORT void JNICALL Java_by_bytechs_jni_JNIHelloWorld_printHelloWorld
         (JNIEnv *, jobject) {
@@ -25,6 +26,7 @@ JNIEXPORT jstring JNICALL Java_by_bytechs_jni_JNIHelloWorld_getLine
     }
     int i = printf("%s", str);
     (*env).ReleaseStringUTFChars(prompt, str);
+    env->GetStringLength(prompt);
 /* We assume here that the user does not type more than
 * 127 characters */
     scanf("%s", buf);
